@@ -1,0 +1,70 @@
+<template name="viewProduct">
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <div class="card card-default z-depth">
+                <div class="card-header">
+                    <h2 class="card-media-heading">Product Details</h2>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group dc-twoline-list">
+                        <li class="list-group-item">
+                            <div class="media-body">
+                                <h3 class="card-media-heading">Name</h3>
+                                <span class="card-media-text">{{productData.name}}</span>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="media-body">
+                                <h3 class="card-media-heading">Category</h3>
+                                <span class="card-media-text">{{getCategory productData.category}}</span>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="media-body">
+                                <h3 class="card-media-heading">brand</h3>
+                                <span class="card-media-text">{{productData.brand}}</span>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="media-body">
+                                <h3 class="card-media-heading">color</h3>
+                                <span class="card-media-text">{{productData.color}}</span>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="media-body">
+                                <h3 class="card-media-heading">price</h3>
+                                <span class="card-media-text">{{productData.price}}</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <div class="card card-default z-depth">
+                <div class="card-header">
+                    <h2 class="card-media-heading">Variation Details</h2>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group dc-twoline-list">
+                        {{#each productData.variations}}
+                            <li class="list-group-item">
+                                <div class="media-body">
+                                    <h3 class="card-media-heading">Quantity</h3>
+                                    <span class="card-media-text">{{this.quantity}}</span>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="media-body">
+                                    <h3 class="card-media-heading">Size</h3>
+                                    <span class="card-media-text">{{this.size}}</span>
+                                </div>
+                            </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

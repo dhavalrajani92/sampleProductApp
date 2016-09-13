@@ -1,0 +1,55 @@
+<template name="productListings">
+    <div class="card z-depth">
+        <a href="{{pathFor 'addProduct'}}" class="btn btn-success">Add Product</a>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Brand</th>
+                    <th>Color</th>
+                    <th>Price</th>
+
+                    <th></th>
+
+                </tr>
+                </thead>
+                <tbody>
+                {{#each getProductData}}
+                    <tr>
+                        <td>{{this.name}}</td>
+                        <td>{{getCategory this.category}}</td>
+                        <td>{{this.brand}}</td>
+                        <td>{{this.color}}</td>
+                        <td>{{this.price}}</td>
+                        <td><a href="{{pathFor 'viewProduct' _id=this._id}}" class="btn btn-primary ripple-effect">View</a> </td>
+                    </tr>
+                {{/each}}
+                </tbody>
+            </table>
+        </div>
+        <nav>
+            <ul class="pager">
+                {{#if lessResults}}
+                    <li class="{{lessResults}}">
+                        <a href="#" id="previous">
+                            <span aria-hidden="true">&larr;</span> Previous
+                        </a>
+                    </li>
+                {{else}}
+
+                {{/if}}
+                {{#if moreResults}}
+                 {{else}}
+                    <li class="{{moreResults}}">
+                        <a href="#" id="next">
+                            Next <span aria-hidden="true">&rarr;</span>
+                        </a>
+                    </li>
+                {{/if}}
+            </ul>
+        </nav>
+    </div>
+
+</template>

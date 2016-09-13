@@ -1,0 +1,42 @@
+.card .form-horizontal .form-group{ margin-left:inherit; margin-right:inherit}
+.card { background-color:#fff; border-radius:2px; margin-bottom: 30px;  background-color: #fff;  display: inline-block; width:100%;}
+.card-body { padding-left:16px; padding-right:16px; margin-top:16px; margin-bottom:16px; color:rgba(0, 0, 0, 0.84)}
+
+.card-header { padding: 16px 16px 0 16px; margin-bottom:16px; border-bottom: 1px solid transparent; border-top-left-radius: 3px; border-top-right-radius: 3px;}
+.card-heading { padding: 16px 16px 0 16px; margin-bottom:16px; border-bottom: 1px solid transparent; border-top-left-radius: 3px; border-top-right-radius: 3px;}
+.card-header > .dropdown .dropdown-toggle { color: inherit;}
+.card-heading > .dropdown .dropdown-toggle { color: inherit;}
+.card-title,
+.card-media-heading { margin-top: 0; margin-bottom: 0; color: inherit;}
+h2.card-media-heading{ font-size:1.5rem; font-weight:400; margin-bottom:2px;}
+.card-media-text { line-height: 1.6;  margin-bottom: 0;  opacity: 0.54;}
+.card-footer{ padding:8px 16px; display:table; content:""; width:100%;}
+.card-action{ padding:8px 4px;}
+.card-action .btn{ margin-left:4px; margin-right:4px; margin-bottom:8px;}
+.card-action .btn:first-child{margin-left:12px;}
+.card-action .btn:last-child{margin-right:12px;}
+.card-action .btn.btn-flat{ margin-left:4px; margin-right:4px; margin-bottom:0;}
+.card-action .btn{padding: 10px 8px; min-width:inherit;}
+.card-action .btn.btn-circle{padding: 0;}
+
+/* Card Media Action */
+.card-media-action .card-media{ margin-top:16px; padding-left:16px; padding-right:16px;}
+.card-media-action .card-media h2.card-media-heading{ margin-top:4px;}
+
+.card-footer-p16 { padding-left: 20px; padding-right: 20px;}
+.card-footer-no-border { border-color: transparent; padding-top: 0;}
+
+.card-list{ padding-top:8px; padding-bottom:8px; background-color:#fff;}
+
+/* DC Card */
+.panel { margin-bottom: 20px;  background-color: #fff;  border: 1px solid transparent;  border-radius: 4px;  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);         box-shadow: 0 1px 1px rgba(0, 0, 0, .05);}
+.panel-body { padding: 15px;}
+.panel-heading { padding: 10px 15px; border-bottom: 1px solid transparent; border-top-left-radius: 3px; border-top-right-radius: 3px;}
+.panel-heading > .dropdown .dropdown-toggle { color: inherit;}
+.panel-title { margin-top: 0; margin-bottom: 0; font-size: 16px; color: inherit;}
+.panel-title > a, .panel-title > small, .panel-title > .small, .panel-title > small > a, .panel-title > .small > a { color: inherit;}
+.panel-footer { padding: 10px 15px; background-color: #f5f5f5; border-top: 1px solid #ddd; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px;}
+
+/* Card inverse*/
+.card-inverse{ background-color: #373a3c; color: #eceeef;}
+.card-inverse .card-body{color: rgba(255, 255, 255, 0.84);}

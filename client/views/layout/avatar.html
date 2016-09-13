@@ -1,0 +1,7 @@
+<template name="avtar">
+    {{#with FS.GetFile "Images" currentUser.profile.image}}
+        <img width="{{width}}" height="{{height}}" src="{{this.url store='thumbs'}}" class="{{class}}" alt="avatar">
+    {{else}}
+        <img src="{{default_avtar currentUser.emails.[0].address 40}}" width="{{width}}" height="{{height}}" class="{{class}}" alt="avatar" />
+    {{/with}}
+</template>

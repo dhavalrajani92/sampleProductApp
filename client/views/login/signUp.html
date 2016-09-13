@@ -1,0 +1,76 @@
+<template name="signUp">
+    <div class="logincard">
+
+        <div class="card-main card-default z-depth">
+
+            <div class="login-card">
+
+                <form id="frmSignup">
+                    <div class="card-header card-header-border text-center">
+                        <div class="loginlogo">
+                            <a href="#"><img src="/images/logo.png"></a>
+                        </div>
+                        <h3>Sign Up <span>with Product App</span></h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group paper-input floating-label">
+                            <label for="inputError1" class="control-label input-group-floating-label">Username</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="dic-perm-identity dic"></i></div>
+                                <input type="text" name="username" class="form-control validationRequired">
+                                <span class="bar"></span>
+                                <span class="has-error-text"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group paper-input floating-label">
+                            <label for="inputError1" class="control-label input-group-floating-label">Password</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="dic-lock-outline dic"></i></div>
+                                <input type="password" name="password" class="form-control validationRequired">
+                                <span class="bar"></span>
+                                <span class="has-error-text"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer card-footer-no-border card-footer-p16 text-center">
+                        <button type="submit" class="btn ripple-effect btn-primary btn-block">Login</button>
+                        <div class="form-group clearfix">
+                            <span class="pull-right forgot-password">
+                                <a href="{{pathFor 'login'}}">Login</a>
+                            </span>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <div class="forgot-password-card">
+
+                <form>
+                    <div class="card-header card-header-border text-center">
+                        <div class="loginlogo">
+                            <a href="#"><img src="assets/images/logo.png"></a>
+                        </div>
+                        <h3>Forgot password?, <br><span>Enter your email address and we'll send you a link to reset your password.</span></h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group paper-input floating-label">
+                            <label for="inputError1" class="control-label input-group-floating-label">Email address</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="dic-email dic"></i></div>
+                                <input type="text" class="form-control" id="exampleInputAmount"><span class="bar"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-footer card-footer-no-border card-footer-p16 text-center">
+                        <button type="button" class="btn ripple-effect btn-primary btn-block">Sign Up</button>
+                        <p class="redirection-link">Already have an account, <a href="#" class="register-login">Sign In</a>.</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    {{paperInput}}
+    {{loadFormValidationMessage}}
+</template>

@@ -1,0 +1,114 @@
+<template name="addProduct">
+    <h2>Add Product</h2>
+    <div class="row">
+        <div class="col-md-5">
+            <div class="card-main z-depth">
+                {{> productAddForm}}
+            </div>
+        </div>
+    </div>
+    {{paperInput}}
+    {{loadFormValidationMessage}}
+</template>
+<template name="productAddForm">
+    <form class="form-horizontal" id="frmAddProduct">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group paper-input floating-label">
+                        <label>Product name</label>
+                        <input type="text" name="name" class="form-control validationRequired">
+                        <div class="has-error-text error-text"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group paper-input floating-label">
+                        <label>Category</label>
+                        <select name="category" data-placeholder="Category" class="form-control select-with-search validationRequired">
+                            <option value=""></option>
+                            {{#each getProductCategories}}
+                                <option value="{{this.code}}">{{this.name}}</option>
+                            {{/each}}
+                        </select>
+                        <span class="bar"></span>
+                        <div class="has-error-text"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group paper-input floating-label">
+                        <label>Brand</label>
+                        <input type="text" name="brand" class="form-control validationRequired">
+                        <div class="has-error-text error-text"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group paper-input floating-label">
+                        <label>Color</label>
+                        <input type="text" name="color" class="form-control validationRequired">
+                        <div class="has-error-text error-text"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group paper-input floating-label">
+                        <label>Price</label>
+                        <input type="text" name="price" class="form-control validationRequired">
+                        <div class="has-error-text error-text"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="parentClass">
+                {{#each getProductVariants}}
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="form-group paper-input floating-label">
+                                <label>quantity</label>
+                                <input data-custom="true" type="text" name="quantity" class="form-control validationRequired">
+                                <div class="has-error-text error-text"></div>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group paper-input floating-label">
+                                <label>Size</label>
+                                <select data-custom="true" name="size" data-placeholder="Size" class="form-control select-with-search validationRequired">
+                                    <option value=""></option>
+                                    {{#each getVariations}}
+                                        <option value="{{this}}">{{this}}</option>
+                                    {{/each}}
+                                </select>
+                                <div class="has-error-text error-text"></div>
+                            </div>
+                        </div>
+                        {{#if equals @index 0}}
+                        {{else}}
+                            <div class="col-lg-4">
+                                <button type="button"  data-index="{{@index}}" class="btn btn-sm btn-circle btn-raised ripple-effect btn-primary removeRow"><span class="dic-highlight-remove dic"></span></button>
+                            </div>
+                        {{/if}}
+                    </div>
+
+                {{/each}}
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <button type="button" id="addRow" class="btn btn-sm btn-circle btn-raised ripple-effect btn-primary"><span class="dic-add dic"></span></button>
+                </div>
+            </div>
+
+        </div>
+        <div class="card-footer card-footer-no-border text-right">
+            <button id="btnCancel" type="button" class="btn ripple-effect btn-default btn-cancel">Cancel</button>
+            <button id="form-submit-button" type="submit" class="btn ripple-effect btn-primary">Save</button>
+        </div>
+    </form>
+</template>

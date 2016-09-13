@@ -1,0 +1,45 @@
+.navbar-default{background:#4285f4;}
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a{color:#fff;}
+.navbar-inverse{ border-color:#4285f4;}
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus,
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus{ background-color:#336fd3;}
+
+/*Flat Button Color Theme*/
+.btn.dark{color:#fff;}
+.btn.disable.dark, .btn.disable.dark:hover, .btn.disable.dark:active{color:rgba(225, 225, 225, 0.3); background:none;}
+.btn:hover.dark{background:rgba(153, 153, 153, 0.15);}
+.btn:active.dark{background:rgba(153, 153, 153, 0.25);}
+
+/*Rasised Button Color Theme*/
+.btn.raised{color:#1d1d1d; background:#e0e0e0;}
+.btn:hover.raised{background:rgba(153, 153, 153, 0.15);}
+.btn:active.raised{background:rgba(153, 153, 153, 0.25);}
+.btn.disable.raised, .btn.disable.raised:hover, .btn.disable.raised:active{color:rgba(0, 0, 0, 0.26);}
+
+/* login css */
+.logincard{margin:auto; position:absolute; left:0; right:0; bottom:0; top:0; max-width:360px;  max-height: 590px;}
+.logincard .checkbox{ margin-left:5px;}
+.logincard .dic{ margin-right:7px;}
+.loginlogo{ text-align:center; padding:8px 0 24px;}
+.forgot-password{padding-top:8px;}
+.remember{ color:#999;}
+
+.redirection-link{ margin-top:20px; margin-bottom:16px;}
+.card-footer-no-border{ border-color:transparent; padding-top:0;}
+.card-footer-p16{ padding-left:20px; padding-right:20px; }
+.card-header-border{ border-bottom:#eee solid 1px; padding-bottom:20px;}
+.login-card h3,
+.register-card h3,
+.forgot-password-card h3{ color:rgba(0, 0, 0, 0.87); font-size:16px;}
+.login-card .card-body,
+.register-card .card-body{ padding-bottom:10px;}
+.register-card, .forgot-password-card{ display:none;}
+.register-card, .login-card, .forgot-password-card{ position:relative;}
+.register-card h3 span,
+.login-card h3 span{ color:rgba(0, 0, 0, 0.54);}
+.forgot-password-card h3 span{ font-size:14px; color:rgba(0, 0, 0, 0.54); width:80%; margin-top:5px; display:inline-block; line-height:18px;}
+@media screen and (max-width: 768px) {
+    .logincard{max-width:300px;}
+    .forgot-password a{font-size: 0.7rem;}
+}
+/* login css */

@@ -1,0 +1,27 @@
+<template name="sideBar">
+    <!-- Overlay for sidebar -->
+    <div class="sidebar-overlay"></div>
+
+    <!-- Left sidebar -->
+    <aside class="sidebar sidebar-default sidebar-stacked sidebar-left open z-depth" role="navigation">
+        <ul class="nav sidebar-nav">
+            <li class="dropdown my-account">
+                <a href="#" class="btn-user dropdown-toggle media" data-toggle="dropdown" aria-expanded="false">
+                    <div class="media-left">
+                        {{> avtar width=40 height=40 class="img-circle"}}
+                    </div>
+                    <div class="media-body media-middle">{{currentUser.username}}</div>
+                    <div class="media-right media-middle"><i class="dic-more-vert dic"></i></div>
+                </a>
+                <ul class="dropdown-menu" style="display: none;">
+                    <li> <a tabindex="-1" href="#" class="ripple-effect logout-btn"><i class="dic-history dic media-left media-middle"></i> <span class="media-body">Logout</span></a></li>
+                    <li class="divider"></li>
+                </ul>
+            </li>
+
+                <li><a class="ripple-effect {{menuItemClass 'home'}}" href="{{pathFor 'home'}}">Home</a></li>
+                <li><a class="ripple-effect {{menuItemClass 'productListings'}}" href="{{pathFor 'productListings'}}">Products</a></li>
+
+        </ul>
+    </aside>
+</template>

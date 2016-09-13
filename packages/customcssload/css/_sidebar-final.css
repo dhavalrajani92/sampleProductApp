@@ -1,0 +1,53 @@
+/* -- Content --------------------------------------- */
+.constructor, .dc-content{ position: relative; margin: 0; padding-top:74px; padding-left:30px; padding-right:30px; -webkit-transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1); -o-transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1); transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);}
+.sidebar, .wrapper, .dc-content { vertical-align:top;}
+
+/* -- Sidebar Overlay ------------------------------- */
+/*.sidebar-overlay{ visibility: hidden; position: fixed; top: 0; left: 0; right: 0; bottom: 0; opacity: 0; background: #000; z-index:998; -webkit-transition: visibility 0 linear 0.4s, opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1); -moz-transition: visibility 0 linear 0.4s, opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1); transition: visibility 0 linear 0.4s, opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1); -webkit-transform: translateZ(0); -moz-transform: translateZ(0); -ms-transform: translateZ(0); -o-transform: translateZ(0); transform: translateZ(0);}*/
+/*-- Overlay Active --*/
+/*.sidebar-overlay.active{ opacity: 0.5; visibility: visible; -webkit-transition-delay: 0; -moz-transition-delay: 0; transition-delay: 0;}*/
+
+/* -- Sidebar --------------------------------------- */
+.sidebar {position: relative; display: block; min-height: 100%; overflow-y: auto; overflow-x: hidden; border: none; -webkit-transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);-o-transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1); transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1); padding-top:64px; background:#fff; width: 0; -webkit-transform: translate3d(-280px, 0, 0); -moz-transform: translate3d(-280px, 0, 0);transform: translate3d(-280px, 0, 0);}
+.sidebar:before, .sidebar:after { content: " "; display: table;}
+.sidebar:after { clear: both;}
+.sidebar::-webkit-scrollbar-track { border-radius: 2px;}
+.sidebar::-webkit-scrollbar { width: 5px; background-color: #F7F7F7;}
+.sidebar::-webkit-scrollbar-thumb { border-radius: 10px; -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); background-color: #BFBFBF;}
+@media (max-width: 767px) {
+.sidebar {padding-top:0; width: 0; -webkit-transform: translate3d(-280px, 0, 0); -moz-transform: translate3d(-280px, 0, 0);transform: translate3d(-280px, 0, 0);}
+}
+
+/* -- Sidebar show/hide --*/
+.sidebar.open { min-width: 280px; width: 280px; -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0);transform: translate3d(0, 0, 0);}
+@media (max-width: 767px) {
+.sidebar.open { min-width: 280px; width: 280px; -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0);transform: translate3d(0, 0, 0);}
+body.open-sidebar { overflow: hidden;}
+}
+
+/*-- Sidebar Stacked--*/
+.sidebar-stacked { left: 0;}
+.sidebar-stacked.open + .wrapper .constructor,
+.sidebar-stacked.open + .dc-content{ margin-left: 280px;}
+
+/*-- Left and Right Sidebar --*/
+.sidebar-fixed-left,
+.sidebar-fixed-right,
+.sidebar-stacked {position: fixed; top: 0; bottom: 0; z-index:999;}
+.sidebar-fixed-left { left: 0; box-shadow: 2px 0px 15px rgba(0, 0, 0, 0.35);}
+.sidebar-fixed-right { right: 0; -webkit-transform: translate3d(280px, 0, 0); -moz-transform: translate3d(280px, 0, 0);transform: translate3d(280px, 0, 0);}
+.sidebar-fixed-right.open { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0);}
+
+/* -- Sidebar nav --*/
+.sidebar .sidebar-nav li { position: relative;}
+.sidebar .sidebar-nav li a { position: relative; cursor: pointer; clear: both; overflow: hidden; -o-text-overflow: ellipsis; text-overflow: ellipsis; white-space: nowrap; -webkit-transition: all 0.2s ease-in-out; -o-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out;}
+.sidebar .sidebar-nav .dropdown-menu { position: relative; width: 100%; margin: 0; padding: 0; border: none; border-radius: 0; -webkit-box-shadow: none; box-shadow: none;}
+.sidebar .sidebar-nav .dropdown-menu li a{ padding-left:24px;}
+@media (max-width: 767px) {.sidebar .sidebar-nav .dropdown-menu li a{padding-left:16px;}}
+@media (max-width: 768px) {
+.sidebar .sidebar-header { height: 135px; } 
+.sidebar .sidebar-image img { width: 44px; height: 44px;}
+}
+
+.topbar-fixed{transform: translate3d(0px, -200px, 0px); width:100%; height:0; overflow:hidden; -webkit-transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);-o-transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1); transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);}
+.topbar-fixed.open{transform: translate3d(0px, 0, 0px); width:100%; height:300px; overflow:hidden; opacity:1;}
